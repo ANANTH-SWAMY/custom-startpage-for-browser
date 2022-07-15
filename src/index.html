@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet">
+		<title>startpage</title>
+	</head>
 
+	<body>
+		<div class="container">
+			
+			<span id="clock">00:00:00</span>
+
+			<div id="date">00-00-0000</div>
+			<div> </div>
+
+			<div class="text">
+				<div id="logo"></div>
+				<input id="search" onkeypress="handle_key_press()" onkeyup="change_logo()">
+				<button id="search_button" onclick="search()"></button>
+			</div>			
+
+		</div>	
+
+		<div class="settings_menu close" id="settings_menu" style="display: none;">
+			<div id="foreground">
+				<div class="fg_label">foreground:</div>
+				<input id="fg_input">
+			</div>
+			<div id="background">
+				<div class="bg_label">background:</div>
+				<input id="bg_input">
+			</div>
+			<button class="save" onclick="set_theme()">OK</button>
+		</div>
+
+		<button id="settings_button" onclick="toggle_settings()">漣</button>
+
+		<script src="script.js"></script>
+
+	</body>
+</html>

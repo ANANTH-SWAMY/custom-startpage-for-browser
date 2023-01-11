@@ -137,5 +137,22 @@ function set_theme(){
 	settings.classList.add('close')
 }
 
+function reset_theme(){
+	let settings=document.getElementById("settings_menu")
+	let root=document.documentElement
+	let fg=document.getElementById("fg_input")
+	let bg=document.getElementById("bg_input")
+	root.style.setProperty('--foreground', "")
+	root.style.setProperty('--background', "")
+	localStorage.setItem("fg_color", "")
+	localStorage.setItem("bg_color", "")
+	fg.value=""
+	bg.value=""
+	setTimeout(function(){settings.style.display = "none"},150) 
+	settings.classList.remove('open')
+	settings.classList.add('close')
+}
+
 //
 // suggestqueries.google.com/complete/search?client=chrome&q=<q>&hl=en
+// var reg=/^#([0-9a-f]{3}){1,2}$/i; hex color verification

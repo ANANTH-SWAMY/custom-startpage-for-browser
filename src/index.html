@@ -15,7 +15,7 @@
 
 			<div class="text">
 				<div id="logo"></div>
-				<input id="search" onkeypress="handle_key_press()" onkeyup="change_logo()">
+				<input id="search" onkeypress="handle_key_press()" onkeyup="change_logo()" autofocus="autofocus" spellcheck="false">
 				<button id="search_button" onclick="search()"></button>
 			</div>			
 
@@ -30,10 +30,15 @@
 				<div class="bg_label">background:</div>
 				<input id="bg_input">
 			</div>
-			<button class="save" onclick="set_theme()">OK</button>
+			<div id="other">
+				<button class="reset" onclick="reset_theme()">RESET</button>
+				<button class="save" onclick="set_theme()">OK</button>
+			</div>
 		</div>
 
 		<button id="settings_button" onclick="toggle_settings()">漣</button>
+
+		<footer>Made with im </footer>
 
 		<script src="script.js"></script>
 

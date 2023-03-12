@@ -8,3 +8,5 @@ Customizable home/start page for web browsers
 * `r/<searchterm>` for searching Reddit.
 * `gh/<searchterm>` for searching Github.
 * The settings button at the bottom left of the page can be used to change the color theme.
+
+Mobile devices not yet supported.

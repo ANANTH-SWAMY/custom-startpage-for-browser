@@ -2,7 +2,7 @@
 
 Customizable minimalistic home/start page for web browsers
 
-![ss](https://user-images.githubusercontent.com/75056416/224541339-06f1563f-5d67-4133-bc0c-8a2fa7e63815.png)
+![ss](preview/ss.png)
 
 ## Instructions for use
 * `yt/<searchterm>` for searching Youtube.

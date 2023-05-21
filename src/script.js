@@ -51,8 +51,8 @@ function search(){
 		}else if (website=="github"){
 			window.open("https://github.com/search?q="+final,"_self")
 		}
+		document.getElementById("search").value=""
 	}
-	document.getElementById("search").value=""
 }
 
 function handle_key_press(e){
@@ -75,7 +75,6 @@ function change_logo(){
 	}
 }
 
-
 function showTime(){
 	let time = new Date() 
 	let hour = time.getHours() 
@@ -86,8 +85,7 @@ function showTime(){
 	hour = hour < 10 ? "0" + hour : hour
 	min = min < 10 ? "0" + min : min 
 
-	let currentTime = hour + ":" 
-			+ min 
+	let currentTime = hour + ":" + min 
 
 	document.getElementById("clock")
 			.innerHTML = currentTime 
@@ -113,7 +111,7 @@ showDate()
 function toggle_settings(){
 	let settings=document.getElementById("settings_menu")
 	if(settings.style.display !== "none"){
-		setTimeout(function(){settings.style.display = "none"},150) 
+		setTimeout(function(){settings.style.display = "none"},190) 
 		settings.classList.remove('open')
 		settings.classList.add('close')
 	}else { 
@@ -132,7 +130,7 @@ function set_theme(){
 	root.style.setProperty('--background', bg.value)
 	localStorage.setItem("fg_color", fg.value)
 	localStorage.setItem("bg_color", bg.value)
-	setTimeout(function(){settings.style.display = "none"},150) 
+	setTimeout(function(){settings.style.display = "none"},190) 
 	settings.classList.remove('open')
 	settings.classList.add('close')
 }
@@ -148,7 +146,7 @@ function reset_theme(){
 	localStorage.setItem("bg_color", "")
 	fg.value=""
 	bg.value=""
-	setTimeout(function(){settings.style.display = "none"},150) 
+	setTimeout(function(){settings.style.display = "none"},190) 
 	settings.classList.remove('open')
 	settings.classList.add('close')
 }
